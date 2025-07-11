@@ -66,13 +66,4 @@ public class OrderServiceTest {
         );
         assertEquals("Subtotal cannot be negative", exception.getMessage());
     }
-
-    @Test
-public void testNegativeSubtotal() {
-IllegalArgumentException exception = assertThrows(
-IllegalArgumentException.class,
-() -> service.getTotal(-100.0, true, false)
-);
-assertEquals("Subtotal no puede ser negativo", exception.getMessage());
-}
 }
